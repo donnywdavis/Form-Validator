@@ -45,7 +45,7 @@
 }
 
 - (BOOL)isValidState:(NSString *)stateString {
-    return stateString.length > 0;
+    return stateString.length == 2;
 }
 
 - (BOOL)isValidZipCode:(NSString *)zipCodeString {

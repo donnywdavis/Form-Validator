@@ -10,6 +10,13 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *addressTextField;
+@property (weak, nonatomic) IBOutlet UITextField *cityTextField;
+@property (weak, nonatomic) IBOutlet UITextField *zipTextField;
+@property (weak, nonatomic) IBOutlet UITextField *stateTextField;
+@property (weak, nonatomic) IBOutlet UITextField *phoneTextField;
+
 @end
 
 @implementation ViewController

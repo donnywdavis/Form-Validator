@@ -6,15 +6,15 @@ Create a single view application that shows textfields for name, street address,
 
 ### Steps to Success
 ### Storyboard Tasks
-* [ ] Add six textfields to the view.
-* [ ] Center the first textfield horizontally with the superview.
-* [ ] Set a proportional width of the first textfield as 80% the width of the superview.
-* [ ] Set a top space constraint on the first textfield with a value of 8 points from the top layout guide.
-* [ ] set the placeholder text for the TextFields as [ Name, Address, City, State, Zip Code, Phone Number]
-* [ ] set the address and City TextFields to be equal widths of the Name TextField
-* [ ] Align the tops of the Zip Code TextFields underneath the City TextField
-* [ ] put the Phone Number TextField underneatht the State and Zip.
-* [ ] separate each row by 8 pts.
+* [x] Add six textfields to the view.
+* [x] Center the first textfield horizontally with the superview.
+* [x] Set a proportional width of the first textfield as 80% the width of the superview.
+* [x] Set a top space constraint on the first textfield with a value of 8 points from the top layout guide.
+* [x] set the placeholder text for the TextFields as [ Name, Address, City, State, Zip Code, Phone Number]
+* [x] set the address and City TextFields to be equal widths of the Name TextField
+* [x] Align the tops of the Zip Code TextFields underneath the City TextField
+* [x] put the Phone Number TextField underneatht the State and Zip.
+* [x] separate each row by 8 pts.
 * [ ] Create properties for each TextField
 
 ### Code Tasks

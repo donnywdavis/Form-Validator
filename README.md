@@ -21,8 +21,8 @@ Create a single view application that shows textfields for name, street address,
 * [x] Set the title of the view in viewDidLoad to "Validator"
 * [x] Set the view controller as a delegate of UITextField.
 * [x] Create one method in FormValidator per TextField that will validate the contents of that TextField.
-* [ ] following the pattern we used in class, continue checking the contents of the current TextField before moving on to the next field with resignFirstResponder and becomeFirstResponder
-* [ ] Once you have checked and validated all of the TextFields, hide the keyboard.
+* [x] following the pattern we used in class, continue checking the contents of the current TextField before moving on to the next field with resignFirstResponder and becomeFirstResponder
+* [x] Once you have checked and validated all of the TextFields, hide the keyboard.
 
 ### Hard Mode
 * [ ] Find a way to validate a city

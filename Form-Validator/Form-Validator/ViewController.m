@@ -7,8 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "FormValidator.h"
 
-@interface ViewController ()
+@interface ViewController () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *addressTextField;
@@ -23,7 +24,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    
+    // Let's set our title for the view
+    self.title = @"Validator";
 }
 
 - (void)didReceiveMemoryWarning {

@@ -10,4 +10,11 @@
 
 @interface FormValidator : NSObject
 
+- (BOOL)isValidName:(NSString *)nameString;
+- (BOOL)isValidAddress:(NSString *)addressString;
+- (BOOL)isValidCity:(NSString *)cityString;
+- (BOOL)isValidState:(NSString *)stateString;
+- (BOOL)isValidZipCode:(NSString *)zipCodeString;
+- (BOOL)isValidPhoneNumber:(NSString *)phoneNumberString;
+
 @end

@@ -39,6 +39,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+//    if ([textField isEqual:self.stateTextField]) {
+//        [self.stateTextField resignFirstResponder];
+//    }
+}
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     if ([textField isEqual:self.nameTextField]) {
         if ([self.formValidator isValidName:textField.text]) {
@@ -94,6 +100,13 @@
         if ([self.formValidator isValidPhoneNumber:textField.text]) {
             [self.phoneTextField resignFirstResponder];
             self.phoneTextField.backgroundColor = [UIColor clearColor];
+            
+            // Present an alert controller if evertyhing passes validation
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Sweetness" message:@"Boom! All the things validate!" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil];
+            [alertController addAction:okAction];
+            [self presentViewController:alertController animated:YES completion:nil];
+            
             return YES;
         } else {
             self.phoneTextField.backgroundColor = [UIColor redColor];

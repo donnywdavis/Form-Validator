@@ -15,7 +15,7 @@ Create a single view application that shows textfields for name, street address,
 * [x] Align the tops of the Zip Code TextFields underneath the City TextField
 * [x] put the Phone Number TextField underneatht the State and Zip.
 * [x] separate each row by 8 pts.
-* [ ] Create properties for each TextField
+* [x] Create properties for each TextField
 
 ### Code Tasks
 * [ ] Set the title of the view in viewDidLoad to "Validator"

@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "FormValidator.h"
 
-@interface ViewController () <UITextFieldDelegate>
+@interface ViewController () <UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *addressTextField;
@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *phoneTextField;
 
 @property (strong, nonatomic) FormValidator *formValidator;
+
+@property (strong, nonatomic) UIPickerView *statePickerView;
 
 @end
 
@@ -32,12 +34,19 @@
     
     // Initialize our form validator before we forget again
     self.formValidator = [[FormValidator alloc] init];
+    self.statePickerView = [[UIPickerView alloc] init];
+    self.statePickerView.delegate = self;
+    self.statePickerView.dataSource = self;
+    self.statePickerView.showsSelectionIndicator = YES;
+    self.stateTextField.inputView = self.statePickerView;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - UITextFieldDelegate
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
 //    if ([textField isEqual:self.stateTextField]) {
@@ -115,6 +124,24 @@
     }
     
     return NO;
+}
+
+#pragma mark - UIPickerViewDelegate
+
+- (nullable NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    return @"NC";
+}
+
+#pragma mark - UIPickerViewDataSource
+
+// returns the number of 'columns' to display.
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    return 1;
+}
+
+// returns the # of rows in each component..
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    return 2;
 }
 
 @end
